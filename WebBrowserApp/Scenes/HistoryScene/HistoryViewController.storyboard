@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--History View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="HistoryViewController" id="Y6W-OH-hqX" customClass="HistoryViewController" customModule="WebBrowserApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qfW-gi-Fou">
+                                <rect key="frame" x="0.0" y="108" width="393" height="710"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P6S-Oy-hpW">
+                                <rect key="frame" x="0.0" y="59" width="393" height="41"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jij-Qi-l5e" userLabel="BackButton">
+                                        <rect key="frame" x="0.0" y="0.0" width="49.333333333333336" height="41"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="49.333333333333336" id="Obv-BF-xXj"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="chevron.backward.2" catalog="system"/>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K8t-hV-gXS">
+                                        <rect key="frame" x="65.333333333333343" y="0.0" width="327.66666666666663" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="K8t-hV-gXS" secondAttribute="trailing" id="3bE-nu-Lvc"/>
+                                    <constraint firstItem="K8t-hV-gXS" firstAttribute="leading" secondItem="Jij-Qi-l5e" secondAttribute="trailing" constant="16" id="4BN-E3-UfQ"/>
+                                    <constraint firstItem="Jij-Qi-l5e" firstAttribute="leading" secondItem="P6S-Oy-hpW" secondAttribute="leading" id="8Md-kr-USV"/>
+                                    <constraint firstAttribute="bottom" secondItem="Jij-Qi-l5e" secondAttribute="bottom" id="Ncb-i8-iB7"/>
+                                    <constraint firstAttribute="bottom" secondItem="K8t-hV-gXS" secondAttribute="bottom" id="YXH-lf-now"/>
+                                    <constraint firstItem="Jij-Qi-l5e" firstAttribute="top" secondItem="P6S-Oy-hpW" secondAttribute="top" id="dW7-YH-s1J"/>
+                                    <constraint firstItem="K8t-hV-gXS" firstAttribute="top" secondItem="P6S-Oy-hpW" secondAttribute="top" id="emv-D6-cnh"/>
+                                    <constraint firstAttribute="height" constant="41" id="l5D-vi-gna"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="P6S-Oy-hpW" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="5qB-oY-hLz"/>
+                            <constraint firstItem="qfW-gi-Fou" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="ByM-fJ-t9S"/>
+                            <constraint firstItem="qfW-gi-Fou" firstAttribute="top" secondItem="P6S-Oy-hpW" secondAttribute="bottom" constant="8" symbolic="YES" id="FtJ-uS-9ZE"/>
+                            <constraint firstItem="P6S-Oy-hpW" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="JUM-f7-z9m"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="P6S-Oy-hpW" secondAttribute="trailing" id="eSM-6C-Mve"/>
+                            <constraint firstItem="qfW-gi-Fou" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="i2D-Mf-Mcm"/>
+                            <constraint firstItem="qfW-gi-Fou" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="jHW-nG-1HX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="Jij-Qi-l5e" id="fSe-ao-DxC"/>
+                        <outlet property="historyTableView" destination="qfW-gi-Fou" id="Rdo-9y-4sm"/>
+                        <outlet property="searchTextField" destination="K8t-hV-gXS" id="inM-M8-tlC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135.1145038167939" y="4.9295774647887329"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.backward.2" catalog="system" width="128" height="108"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

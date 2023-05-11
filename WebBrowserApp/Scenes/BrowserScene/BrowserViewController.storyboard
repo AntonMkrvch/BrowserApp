@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Browser View Controller-->
+        <scene sceneID="MyS-yp-9L9">
+            <objects>
+                <viewController storyboardIdentifier="BrowserViewController" id="FXA-41-bh6" customClass="BrowserViewController" customModule="WebBrowserApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gbw-ru-n0q">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mzz-iG-6of">
+                                <rect key="frame" x="0.0" y="59" width="393" height="42"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ll7-m6-9Rq">
+                                        <rect key="frame" x="0.0" y="0.0" width="42" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Ll7-m6-9Rq" secondAttribute="height" multiplier="1:1" id="l5T-IE-Ip3"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="arrow.backward" catalog="system"/>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="For example https://google.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rlN-tT-28o">
+                                        <rect key="frame" x="41.999999999999986" y="4" width="249.66666666666663" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="nBt-Cv-lHZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2zr-fx-SCw">
+                                        <rect key="frame" x="291.66666666666669" y="4" width="49.666666666666686" height="34"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="clock.fill" catalog="system"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auN-7w-HdF">
+                                        <rect key="frame" x="341.33333333333331" y="-4.6666666666666643" width="51.666666666666686" height="51.666666666666664"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="auN-7w-HdF" secondAttribute="height" multiplier="1:1" id="fQA-Ew-xeZ"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="repeat" catalog="system"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Ll7-m6-9Rq" firstAttribute="top" secondItem="mzz-iG-6of" secondAttribute="top" id="0Nf-xX-nAY"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ll7-m6-9Rq" secondAttribute="bottom" id="6xn-91-gEd"/>
+                                    <constraint firstItem="2zr-fx-SCw" firstAttribute="centerY" secondItem="Ll7-m6-9Rq" secondAttribute="centerY" id="E4M-Yo-JXb"/>
+                                    <constraint firstAttribute="height" constant="42" id="JQI-Th-1Ja"/>
+                                    <constraint firstItem="2zr-fx-SCw" firstAttribute="height" secondItem="Ll7-m6-9Rq" secondAttribute="height" multiplier="0.809524" id="KgV-hN-hcB"/>
+                                    <constraint firstItem="rlN-tT-28o" firstAttribute="leading" secondItem="Ll7-m6-9Rq" secondAttribute="trailing" id="Oeo-Cg-EpH"/>
+                                    <constraint firstAttribute="trailing" secondItem="auN-7w-HdF" secondAttribute="trailing" id="RK2-UO-iLS"/>
+                                    <constraint firstItem="rlN-tT-28o" firstAttribute="top" secondItem="mzz-iG-6of" secondAttribute="top" constant="4" id="Z4Y-R2-dQ1"/>
+                                    <constraint firstItem="auN-7w-HdF" firstAttribute="leading" secondItem="2zr-fx-SCw" secondAttribute="trailing" id="dGM-Sf-bUN"/>
+                                    <constraint firstItem="auN-7w-HdF" firstAttribute="height" secondItem="Ll7-m6-9Rq" secondAttribute="height" multiplier="1.23016" id="eQh-Yc-Ytw"/>
+                                    <constraint firstItem="auN-7w-HdF" firstAttribute="width" secondItem="Ll7-m6-9Rq" secondAttribute="width" multiplier="1.23016" id="lTg-XV-GBC"/>
+                                    <constraint firstItem="2zr-fx-SCw" firstAttribute="width" secondItem="Ll7-m6-9Rq" secondAttribute="width" multiplier="1.18254" id="m3r-Wg-iuj"/>
+                                    <constraint firstItem="Ll7-m6-9Rq" firstAttribute="leading" secondItem="mzz-iG-6of" secondAttribute="leading" id="ml3-b8-CKR"/>
+                                    <constraint firstItem="2zr-fx-SCw" firstAttribute="leading" secondItem="rlN-tT-28o" secondAttribute="trailing" id="rjX-Z5-H6K"/>
+                                    <constraint firstItem="auN-7w-HdF" firstAttribute="centerY" secondItem="Ll7-m6-9Rq" secondAttribute="centerY" id="tPC-8w-cTG"/>
+                                    <constraint firstAttribute="bottom" secondItem="rlN-tT-28o" secondAttribute="bottom" constant="4" id="wWu-Cg-1bl"/>
+                                </constraints>
+                            </view>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZHb-Oy-h28">
+                                <rect key="frame" x="0.0" y="101" width="393" height="751"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZFv-Dt-MBL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mzz-iG-6of" firstAttribute="leading" secondItem="ZFv-Dt-MBL" secondAttribute="leading" id="0fz-ws-urx"/>
+                            <constraint firstItem="mzz-iG-6of" firstAttribute="trailing" secondItem="ZFv-Dt-MBL" secondAttribute="trailing" id="I8G-hE-l69"/>
+                            <constraint firstAttribute="bottom" secondItem="ZHb-Oy-h28" secondAttribute="bottom" id="aZZ-nv-ubA"/>
+                            <constraint firstItem="ZHb-Oy-h28" firstAttribute="top" secondItem="mzz-iG-6of" secondAttribute="bottom" id="fWS-hP-OEA"/>
+                            <constraint firstItem="ZHb-Oy-h28" firstAttribute="leading" secondItem="ZFv-Dt-MBL" secondAttribute="leading" id="hX8-Vv-DKD"/>
+                            <constraint firstItem="ZHb-Oy-h28" firstAttribute="trailing" secondItem="ZFv-Dt-MBL" secondAttribute="trailing" id="viW-IG-hL3"/>
+                            <constraint firstItem="mzz-iG-6of" firstAttribute="top" secondItem="ZFv-Dt-MBL" secondAttribute="top" id="w42-6K-zQg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addressTextField" destination="rlN-tT-28o" id="MWs-Nt-Qnu"/>
+                        <outlet property="historyButton" destination="2zr-fx-SCw" id="BM5-so-yBI"/>
+                        <outlet property="repeatButton" destination="auN-7w-HdF" id="ud9-sq-ata"/>
+                        <outlet property="webView" destination="ZHb-Oy-h28" id="TIT-A9-MXm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="igF-hn-QHL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-776.33587786259534" y="-8.4507042253521139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.backward" catalog="system" width="128" height="95"/>
+        <image name="clock.fill" catalog="system" width="128" height="123"/>
+        <image name="repeat" catalog="system" width="128" height="98"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
